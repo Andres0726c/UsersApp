@@ -1,0 +1,9 @@
+
+<mat-grid-list cols="1" *ngIf="!usuario; else divUsuario">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divUsuario> {{ usuario | json  }} </ng-template>
+<button (click)="regresar()"></button>

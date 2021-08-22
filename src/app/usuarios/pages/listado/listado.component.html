@@ -1,0 +1,54 @@
+
+
+<mat-divider></mat-divider>
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> 
+            Usuarios
+        </mat-card-title> 
+        
+    </mat-card-header>
+
+    <mat-card-content>
+        <table>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Avatar
+                </th>
+            </tr>
+            <tr *ngFor="let usuario of usuarios?.data">
+                <td>
+                    {{ usuario.first_name }}
+                </td>
+                <td>
+                    {{ usuario.last_name }}
+                </td>
+                <td>
+                    {{ usuario.email }}
+                </td>
+                <td>
+                    <img src="{{usuario.avatar}}" alt="" srcset="">
+                </td>
+                <button mat-button class="color"
+                        (click)="ver()">Leer más</button>
+            </tr>
+        </table>
+    </mat-card-content>
+</mat-card> 
+
+
+
+
+<!-- <pre>
+    {{usuarios | json}}
+</pre> -->
